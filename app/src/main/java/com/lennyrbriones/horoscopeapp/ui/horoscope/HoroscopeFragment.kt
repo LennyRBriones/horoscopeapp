@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.lennyrbriones.horoscopeapp.databinding.FragmentHoroscopeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HoroscopeFragment : Fragment() {
 
     // "_" is to acces to a private var
