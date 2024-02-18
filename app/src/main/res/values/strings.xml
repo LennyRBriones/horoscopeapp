@@ -9,4 +9,22 @@
     <string name="palmistry">Palmistry</string>
     <string name="luck">Luck</string>
 
+
+    <!-- Horoscope signs -->
+
+    <string name="aries">Horoscope</string>
+    <string name="taurus">Horoscope</string>
+    <string name="gemini">Horoscope</string>
+    <string name="cancer">Horoscope</string>
+    <string name="leo">Horoscope</string>
+    <string name="virgo">Horoscope</string>
+    <string name="libra">Horoscope</string>
+    <string name="scorpio">Horoscope</string>
+    <string name="sagittarius">Horoscope</string>
+    <string name="capricorn">Horoscope</string>
+    <string name="aquarius">Horoscope</string>
+    <string name="pisces">Horoscope</string>
+
+
+
 </resources>
