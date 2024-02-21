@@ -12,6 +12,8 @@ import androidx.navigation.navArgs
 import com.lennyrbriones.horoscopeapp.R
 import com.lennyrbriones.horoscopeapp.databinding.ActivityHoroscopeDetailBinding
 import com.lennyrbriones.horoscopeapp.databinding.ActivityMainBinding
+import com.lennyrbriones.horoscopeapp.domain.model.HoroscopeModel
+import com.lennyrbriones.horoscopeapp.domain.model.HoroscopeModel.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -29,7 +31,7 @@ class HoroscopeDetailActivity : AppCompatActivity() {
         binding = ActivityHoroscopeDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initUI() //saving the type
-        horoscopeDetailViewModel.getHoroscope(args.type.name)
+        horoscopeDetailViewModel.getHoroscope(args.type)
     }
 
     private fun initUI() {
@@ -63,6 +65,23 @@ class HoroscopeDetailActivity : AppCompatActivity() {
         binding.pb.isVisible = false
         binding.tvTitle.text = state.sign
         binding.tvBody.text = state.prediction
+
+        val image = when(state.horoscopeModel){
+            Aries -> R.drawable.detail_aries
+            Taurus -> R.drawable.detail_taurus
+            Gemini -> R.drawable.detail_gemini
+            Cancer -> R.drawable.detail_cancer
+            Leo -> R.drawable.detail_leo
+            Virgo -> R.drawable.detail_virgo
+            Libra -> R.drawable.detail_libra
+            Scorpio -> R.drawable.detail_scorpio
+            Sagitarius -> R.drawable.detail_sagittarius
+            Capricorn -> R.drawable.detail_capricorn
+            Aquarius -> R.drawable.detail_aquarius
+            Pisces -> R.drawable.detail_pisces
+        }
+
+        binding.ivDetail.setImageResource(image)
     }
 
     private fun errorState() {
