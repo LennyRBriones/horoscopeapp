@@ -24,12 +24,13 @@ android {
         getByName("release"){
             isMinifyEnabled = false
             isDebuggable = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
             resValue("string", "lennname", "HoroscopeApp")
             buildConfigField("String","BASE_URL", "\"https://newastro.vercel.app/\"")
+            proguardFiles(
+            getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+
         }
         getByName("debug"){
             isDebuggable = true
